@@ -5,3 +5,9 @@ pipeline:
       - go get
       - go build
       - go test
+      
+services:
+  postgres:
+    image: postgres:9.4.5
+    environment:
+      - POSTGRES_USER=myapp
